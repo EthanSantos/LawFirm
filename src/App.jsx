@@ -1,4 +1,3 @@
-// App.js or App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -9,12 +8,16 @@ import Footer from './components/Footer';
 const App = () => {
     return (
         <Router>
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/testimonials" element={<Testimonials />} /> {/* Route for Testimonials */}
-            </Routes>
-            <Footer />
+            <div className="flex flex-col min-h-screen"> {/* Ensures the flex container takes at least the height of the viewport */}
+                <NavBar />
+                <div className="flex-grow"> {/* Makes this div grow to take available space pushing the footer down */}
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/testimonials" element={<Testimonials />} />
+                    </Routes>
+                </div>
+                <Footer />
+            </div>
         </Router>
     );
 };

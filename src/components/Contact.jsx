@@ -2,11 +2,11 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <section id="contact" className="bg-gray-100 text-gray-900 py-16 px-6">
+        <section id="contact" className="bg-gray-100 text-gray-900 py-16 px-4 sm:px-6">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
                 {/* Contact Details */}
-                <div className="md:w-1/2">
-                    <h2 className="text-4xl font-bold mb-4 text-blue-600 uppercase">Trust Your Law Case to Our Experienced Team.</h2>
+                <div className="w-full md:w-1/2">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-blue-600 uppercase">Trust Your Law Case to Our Experienced Team.</h2>
                     <p className="text-lg font-semibold text-gray-600 mb-8 uppercase">Contact Us for a Consultation.</p>
                     <div className="space-y-8 text-lg">
                         <div className="border-b pb-4">
@@ -32,7 +32,7 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Form */}
-                <div className="md:w-1/2">
+                <div className="w-full md:w-1/2">
                     <h3 className="text-2xl font-bold text-blue-600 mb-6">Contact Us</h3>
                     <form className="space-y-6">
                         <div>
