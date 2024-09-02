@@ -1,44 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
+    const navbarRef = useRef(null);
+    const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);  // State to handle mobile menu toggle
+
     useEffect(() => {
-        const handleLinkClick = (e) => {
-            if (e.target.hash) {
-                e.preventDefault();
-                const targetElement = document.querySelector(e.target.hash);
+        const handleHashChange = () => {
+            if (location.hash) {
+                const targetElement = document.querySelector(location.hash);
                 if (targetElement) {
+                    const navbarHeight = navbarRef.current.offsetHeight;
                     window.scrollTo({
-                        top: targetElement.offsetTop - document.querySelector('.bg-white').offsetHeight,
+                        top: targetElement.offsetTop - navbarHeight,
                         behavior: 'smooth'
                     });
                 }
             }
         };
 
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => link.addEventListener('click', handleLinkClick));
+        handleHashChange(); // Handle hash on initial load
+        window.addEventListener('hashchange', handleHashChange);
 
         return () => {
-            links.forEach(link => link.removeEventListener('click', handleLinkClick));
+            window.removeEventListener('hashchange', handleHashChange);
         };
-    }, []);
+    }, [location.hash]);
 
     return (
-        <div className="bg-white fixed w-full z-50 top-0">
+        <div className="bg-white fixed w-full z-50 top-0" ref={navbarRef}>
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col items-center justify-center py-4">
+                <div className="flex justify-between items-center py-4">
                     <div className="text-lg text-blue-600 font-bold mb-2">
                         LAW OFFICES OF GWENDOLYN M. SANTOS
                     </div>
-                    <div className="flex space-x-4">
-                        <a href="#top" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Home</a>
-                        <a href="#immigration" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Immigration</a>
-                        <a href="#bankruptcy" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Bankruptcy</a>
-                        <a href="#blog" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Our Blog</a>
-                        <a href="#testimonials" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Testimonials</a>
-                        <a href="#publications" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Publications</a>
-                        <a href="#about-us" className="text-gray-800 hover:text-blue-600 text-sm font-medium">About Us</a>
-                        <a href="#contact" className="text-gray-800 hover:text-blue-600 text-sm font-medium">Contact</a>
+                    <div className="sm:hidden">
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800 text-lg">
+                            {isMenuOpen ? 'Close' : 'Menu'}
+                        </button>
+                    </div>
+                    <div className={`absolute w-full sm:static sm:w-auto bg-white sm:bg-transparent top-16 right-0 sm:flex flex-col sm:flex-row ${isMenuOpen ? 'flex' : 'hidden'} space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0`}>
+                        <Link to="/#home" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Home</Link>
+                        <Link to="/testimonials" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Testimonials</Link>
+                        <Link to="/immigration" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Immigration</Link>
+                        <Link to="/bankruptcy" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Bankruptcy</Link>
+                        <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Our Blog</Link>
+                        <Link to="/publications" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Publications</Link>
+                        <Link to="/#about-us" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">About Us</Link>
+                        <Link to="/#contact" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Contact</Link>
                     </div>
                 </div>
             </div>
