@@ -33,7 +33,10 @@ const NavBar = () => {
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     <div className="text-lg text-blue-600 font-bold mb-2">
-                        LAW OFFICES OF GWENDOLYN M. SANTOS
+                        {/* Link wrapping the office name for home navigation */}
+                        <Link to="/#home" className="hover:text-blue-700">
+                            LAW OFFICES OF GWENDOLYN M. SANTOS
+                        </Link>
                     </div>
                     <div className="sm:hidden">
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800 text-lg">
@@ -41,6 +44,7 @@ const NavBar = () => {
                         </button>
                     </div>
                     <div className={`absolute w-full sm:static sm:w-auto bg-white sm:bg-transparent top-16 right-0 sm:flex flex-col sm:flex-row ${isMenuOpen ? 'flex' : 'hidden'} space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0`}>
+                        {/* Readded Home link */}
                         <Link to="/#home" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Home</Link>
                         <Link to="/testimonials" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Testimonials</Link>
                         <Link to="/immigration" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Immigration</Link>
