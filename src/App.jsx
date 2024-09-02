@@ -5,6 +5,7 @@ import Testimonials from './pages/Testimonials'; // Import your Testimonials pag
 import Immigration from './pages/Immigration';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import Bankruptcy from './pages/Bankruptcy';
 
 const App = () => {
     return (
@@ -16,7 +17,7 @@ const App = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/testimonials" element={<Testimonials />} />
                         <Route path="/immigration" element={<Immigration />} />
-                        <Route path="/bankruptcy" element={<Immigration />} />
+                        <Route path="/bankruptcy" element={<Bankruptcy />} />
                     
                     </Routes>
                 </div>
