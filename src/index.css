@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Parallax image on home page */
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -13,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Add this in your global CSS file */
+/* Testimonial Card Animations */
 @keyframes fadeInScaleUp {
   0% {
       opacity: 0;
