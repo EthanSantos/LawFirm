@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const BankruptcyInfo = () => {
+const Bankruptcy = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -58,4 +58,4 @@ const BankruptcyInfo = () => {
     );
 };
 
-export default BankruptcyInfo;
+export default Bankruptcy;

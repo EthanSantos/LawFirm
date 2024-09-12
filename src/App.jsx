@@ -1,24 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Testimonials from './pages/Testimonials'; // Import your Testimonials page
-import Immigration from './pages/Immigration';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Bankruptcy from './pages/Bankruptcy';
+
+import routes from './components/Routes';
 
 const App = () => {
     return (
         <Router>
-            <div className="flex flex-col min-h-screen"> {/* Ensures the flex container takes at least the height of the viewport */}
+            <div className="flex flex-col min-h-screen">
                 <NavBar />
-                <div className="flex-grow"> {/* Makes this div grow to take available space pushing the footer down */}
+                <div className="flex-grow">
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/testimonials" element={<Testimonials />} />
-                        <Route path="/immigration" element={<Immigration />} />
-                        <Route path="/bankruptcy" element={<Bankruptcy />} />
-                    
+                        {routes.map((route, index) => (
+                            <Route key={index} path={route.path} element={route.element} />
+                        ))}
                     </Routes>
                 </div>
                 <Footer />

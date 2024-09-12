@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const ImmigrationInfo = () => {
+const Immigration = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -99,4 +99,4 @@ const ImmigrationInfo = () => {
     );
 };
 
-export default ImmigrationInfo;
+export default Immigration;

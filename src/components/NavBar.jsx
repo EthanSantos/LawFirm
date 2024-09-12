@@ -142,7 +142,6 @@ const NavBar = () => {
                             )}
                         </div>
                         <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Our Blog</Link>
-                        <Link to="/publications" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Publications</Link>
                         <Link to="/#about-us" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">About Us</Link>
                         <Link to="/#contact" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:text-blue-600 text-sm font-medium">Contact</Link>
                     </div>
