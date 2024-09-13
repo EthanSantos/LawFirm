@@ -5,8 +5,32 @@ import GwenProfile from '../assets/GwenProfile.png';
 import Calbar from '../assets/Calbar.png';
 import SupremeCourt from '../assets/SupremeCourt.png';
 import Contact from '../components/Contact'; // Import the Contact component
+import { motion } from 'framer-motion';
 
 const Home = () => {
+
+
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
+    };
+
+    const buttonHover = {
+        scale: 1.05, // Slight scale up on hover
+        boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)", // Soft shadow on hover
+        transition: {
+            duration: 0.2, // Quick transition
+            ease: "easeInOut"
+        }
+    };
+
+    const buttonTap = {
+        scale: 0.9,
+        rotate: -5,
+        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+        transition: { duration: 0.2, ease: "easeInOut" }
+    };
+
     const areas = [
         { id: 1, name: 'Immigration', description: 'Assisting families and businesses in navigating the complexities of the immigration system.' },
         { id: 2, name: 'Bankruptcy', description: 'Providing legal advice and representation in bankruptcy cases.' }
@@ -16,27 +40,54 @@ const Home = () => {
         <main className="pt-16">
             <header
                 id="home"
-                className="text-white text-center py-12 px-6 bg-cover bg-center relative parallax"
+                className="text-white text-center py-12 px-6 bg-cover bg-center relative flex flex-col justify-between items-center"
                 style={{ backgroundImage: `url(${CityBackground})`, height: '650px' }}
             >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
-                    RESPECTED AND EXPERIENCED
-                </h1>
-                <p className="mt-4 max-w-xl mx-auto text-base sm:text-lg drop-shadow">
-                    IMMIGRATION AND BANKRUPTCY LAWYER IN LOS ANGELES
-                </p>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pb-12">
-                    <a href="tel:+12132845984" className="inline-block">
-                        <button className="bg-white text-blue-600 font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-full hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-lg transition duration-200 ease-in-out">
-                            CALL US AT (213) 284-5984
-                        </button>
-                    </a>
+                {/* Top Text Section */}
+                <div className="flex flex-col items-center mt-4">
+                    {/* Animated Heading */}
+                    <motion.h1
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
+                        initial="hidden"
+                        animate="visible"
+                        variants={fadeInUp}
+                    >
+                        RESPECTED AND EXPERIENCED
+                    </motion.h1>
+
+                    {/* Animated Subheading */}
+                    <motion.p
+                        className="mt-2 max-w-xl mx-auto text-base sm:text-lg drop-shadow"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{ ...fadeInUp, transition: { duration: 1.2, ease: 'easeOut' } }}
+                    >
+                        IMMIGRATION AND BANKRUPTCY LAWYER IN LOS ANGELES
+                    </motion.p>
                 </div>
+
+                {/* Bottom Button Section */}
+                <motion.div
+                    className="mt-auto mb-12 flex justify-center items-center"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{ ...fadeInUp, transition: { duration: 1.4, ease: 'easeOut' } }}
+                >
+                    <a href="tel:+12132845984" className="inline-block">
+                        <motion.button
+                            className="bg-white text-primary font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-200 ease-in-out"
+                            whileHover={buttonHover}
+                            whileTap={buttonTap}
+                        >
+                            CALL US AT (213) 284-5984
+                        </motion.button>
+                    </a>
+                </motion.div>
             </header>
 
             <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6">
                 <section className="text-center mb-16">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-8">OUR PRACTICE AREAS</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">OUR PRACTICE AREAS</h2>
                     <div className="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-6 sm:gap-8">
                         {areas.map((area) => (
                             <LegalCards
@@ -49,10 +100,23 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section id="about-us" className="flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden">
-                    <div className="md:w-1/2 bg-blue-900 text-white py-8 px-6 sm:py-12 sm:px-8">
+                <motion.section
+                    id="about-us"
+                    className="flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden my-12"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                >
+                    {/* Our Firm Section */}
+                    <motion.div
+                        className="md:w-1/2 bg-primary text-white py-8 px-6 sm:py-12 sm:px-8"
+                        variants={fadeInUp}
+                    >
                         <div className="text-left p-4 rounded-lg">
-                            <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Our Firm</h3>
+                            <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">
+                                Our Firm
+                            </h3>
                             <p className="text-base sm:text-lg mb-4">
                                 The Law Office of Gwendolyn M. Santos is a law firm located at the Mid-Wilshire District in Los Angeles, CA. Our practice areas are Immigration and Naturalization, Bankruptcy, and Family Law.
                             </p>
@@ -69,17 +133,39 @@ const Home = () => {
                                 Atty. Malaya-Santos has also joined the American Bar Association, the American Immigration Lawyers Association (AILA), Los Angeles Bar Association, and the Beverly Hills Bar Association.
                             </p>
                         </div>
-                    </div>
-                    <div className="md:w-1/2 bg-teal-700 text-white py-8 px-6 flex flex-col items-center justify-center">
+                    </motion.div>
+
+                    {/* Meet Our Attorney Section */}
+                    <motion.div
+                        className="md:w-1/2 bg-secondary text-white py-8 px-6 flex flex-col items-center justify-center"
+                        variants={fadeInUp}
+                    >
                         <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Meet Our Attorney</h3>
-                        <img src={GwenProfile} alt="Attorney Gwendolyn M. Santos" className="w-40 h-40 sm:w-56 sm:h-56 rounded-full shadow-lg mb-4 border-4 border-white hover:shadow-xl transition-shadow duration-300" />
+                        {/* Animated Attorney Image */}
+                        <motion.img
+                            src={GwenProfile}
+                            alt="Attorney Gwendolyn M. Santos"
+                            className="w-40 h-40 sm:w-56 sm:h-56 rounded-full shadow-lg mb-4 border-4 border-white transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{ scale: 1.05 }}
+                        />
                         <h4 className="text-lg sm:text-xl font-bold mt-4">Gwendolyn Malaya-Santos</h4>
+                        {/* Credentials Logos */}
                         <div className="flex justify-center mt-6 space-x-4 sm:space-x-8">
-                            <img src={Calbar} alt="California Bar Association" className="w-16 h-16 sm:w-24 sm:h-24" />
-                            <img src={SupremeCourt} alt="Supreme Court of the Philippines" className="w-16 h-16 sm:w-24 sm:h-24" />
+                            <motion.img
+                                src={Calbar}
+                                alt="California Bar Association"
+                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                whileHover={{ scale: 1.1 }}
+                            />
+                            <motion.img
+                                src={SupremeCourt}
+                                alt="Supreme Court of the Philippines"
+                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                whileHover={{ scale: 1.1 }}
+                            />
                         </div>
-                    </div>
-                </section>
+                    </motion.div>
+                </motion.section>
 
                 <section id="contact" className="py-12">
                     <Contact />
