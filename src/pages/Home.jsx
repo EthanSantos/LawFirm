@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
 
-
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
@@ -40,8 +39,11 @@ const Home = () => {
         <main className="pt-16">
             <header
                 id="home"
-                className="text-white text-center py-12 px-6 bg-cover bg-center relative flex flex-col justify-between items-center"
-                style={{ backgroundImage: `url(${CityBackground})`, height: '650px' }}
+                className="parallax text-white text-center py-12 px-6 bg-cover bg-center relative flex flex-col justify-between items-center"
+                style={{
+                    backgroundImage: `url(${CityBackground})`,
+                    height: '650px'
+                }}
             >
                 {/* Top Text Section */}
                 <div className="flex flex-col items-center mt-4">
@@ -84,6 +86,7 @@ const Home = () => {
                     </a>
                 </motion.div>
             </header>
+
 
             <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6">
                 <section className="text-center mb-16">
