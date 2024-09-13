@@ -16,6 +16,10 @@ import FamilyBasedImmigrationPetition from "../pages/ImmigrationSection/FamilyBa
 import FianceVisa from "../pages/ImmigrationSection/FianceVisa";
 import O1VisaPage from "../pages/ImmigrationSection/O1Visa";
 import CriminalWaiverPage from "../pages/ImmigrationSection/CriminalWaiver";
+import FraudWaiverPage from "../pages/ImmigrationSection/FraudWaiver";
+import J1VisaWaiversPage from "../pages/ImmigrationSection/J1Waivers";
+import ProvisionalWaiverPage from "../pages/ImmigrationSection/ProvisionalWaiver";
+
 
 const routes = [
     { path: "/", element: <Home /> },
@@ -30,9 +34,9 @@ const routes = [
     { path: "/immigration/fiance-visa", element: <FianceVisa /> },
     { path: "/immigration/o-visa", element: <O1VisaPage /> },
     { path: "/immigration/waivers-for-crimes", element: <CriminalWaiverPage /> },
-    { path: "/immigration/waiver-for-immigration-fraud", element: <CriminalWaiverPage /> },
-    { path: "/immigration/j1-waivers", element: <CriminalWaiverPage /> },
-    { path: "/immigration/provisional-waivers", element: <CriminalWaiverPage /> },
+    { path: "/immigration/waiver-for-immigration-fraud", element: <FraudWaiverPage /> },
+    { path: "/immigration/j1-waivers", element: <J1VisaWaiversPage /> },
+    { path: "/immigration/provisional-waivers", element: <ProvisionalWaiverPage /> },
     { path: "/immigration/humanitarian-reinstatement", element: <CriminalWaiverPage /> },
     { path: "/immigration/daca", element: <CriminalWaiverPage /> },
     { path: "/immigration/filipino-veterans-parole", element: <CriminalWaiverPage /> },
