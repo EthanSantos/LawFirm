@@ -58,39 +58,45 @@ const Contact = () => {
                     </div>
                 </motion.div>
 
-                {/* Contact Form */}
                 <motion.div
                     className="w-full md:w-1/2"
                     variants={fadeInUp}
                 >
-                    <h3 className="text-2xl font-bold text-primary mb-6">Contact Us</h3>
+                    <h3 className="text-4xl font-bold text-primary mb-2">Contact Us</h3>
+                    <p className="font-semibold text-gray-600 text-normal mb-6">Fill out the form below and we'll get back to you as soon as possible.</p>
                     <form className="space-y-6">
-                        <div className="form-control">
-                            <input
-                                type="text"
-                                placeholder="Name"
-                                className="input input-bordered w-full focus:outline-none focus:border-primary"
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="form-control">
+                                <label className="block mb-2 text-sm font-medium text-gray-900">First name</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your first name"
+                                    className="input input-bordered w-full focus:outline-none focus:border-primary"
+                                />
+                            </div>
+                            <div className="form-control">
+                                <label className="block mb-2 text-sm font-medium text-gray-900">Last name</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your last name"
+                                    className="input input-bordered w-full focus:outline-none focus:border-primary"
+                                />
+                            </div>
                         </div>
                         <div className="form-control">
-                            <input
-                                type="text"
-                                placeholder="Phone"
-                                className="input input-bordered w-full focus:outline-none focus:border-primary"
-                            />
-                        </div>
-                        <div className="form-control">
+                            <label className="block mb-2 text-sm font-medium text-gray-900">Email</label>
                             <input
                                 type="email"
-                                placeholder="Email"
+                                placeholder="Enter your email"
                                 className="input input-bordered w-full focus:outline-none focus:border-primary"
                             />
                         </div>
                         <div className="form-control">
+                            <label className="block mb-2 text-sm font-medium text-gray-900">Message</label>
                             <textarea
-                                placeholder="Message"
+                                placeholder="Enter your message"
                                 className="textarea textarea-bordered w-full focus:outline-none focus:border-primary"
-                                rows="5"
+                                rows="4"
                             ></textarea>
                         </div>
                         <motion.button
@@ -99,10 +105,11 @@ const Contact = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            SUBMIT
+                            Send message
                         </motion.button>
                     </form>
                 </motion.div>
+
             </div>
         </motion.section>
     );

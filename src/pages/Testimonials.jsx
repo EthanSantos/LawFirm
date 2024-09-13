@@ -53,7 +53,7 @@ const Testimonials = () => {
     ];
 
     return (
-        <div className="pt-[100px] bg-gray-100 py-16">
+        <div className="pt-36 bg-gray-100 py-16">
             <motion.div
                 className="container mx-auto px-4 sm:px-6 lg:px-8"
                 initial="hidden"

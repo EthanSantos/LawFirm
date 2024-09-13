@@ -90,7 +90,7 @@ const NavBar = () => {
                             LAW OFFICES OF GWENDOLYN M. SANTOS
                         </Link>
                     </div>
-                    
+
                     {/* Mobile Menu Button */}
                     <div className="sm:hidden">
                         <button onClick={toggleMenu} className="text-gray-800 text-lg">
@@ -103,11 +103,10 @@ const NavBar = () => {
                     </div>
 
                     {/* Menu for Mobile and Desktop */}
-                    <div className={`${
-                            isMenuOpen ? "flex" : "hidden"
+                    <div className={`${isMenuOpen ? "flex" : "hidden"
                         } sm:flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0 absolute sm:relative top-full sm:top-auto left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent`}>
                         <Link to="/testimonials" className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
-                        
+
                         {/* Immigration Dropdown */}
                         <div className="relative" ref={immigrationDropdownRef}>
                             <button
@@ -126,6 +125,7 @@ const NavBar = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
+                            
                             <AnimatePresence>
                                 {isImmigrationDropdownOpen && (
                                     <motion.div
@@ -134,12 +134,43 @@ const NavBar = () => {
                                         exit={{ opacity: 0, y: -10 }}
                                         className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10"
                                     >
-                                        <Link to="/immigration/naturalization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Naturalization/Citizenship</Link>
-                                        <Link to="/immigration/family-based" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Family-Based Immigration Petition</Link>
-                                        <Link to="/immigration/fiance-visa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Fiance Visa</Link>
+                                        <Link to="/immigration/naturalization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Naturalization/Citizenship
+                                        </Link>
+                                        <Link to="/immigration/family-based" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Family-Based Immigration Petition
+                                        </Link>
+                                        <Link to="/immigration/fiance-visa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Fiance Visa
+                                        </Link>
+                                        <Link to="/immigration/o-visa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            O Visa
+                                        </Link>
+                                        <Link to="/immigration/waivers-for-crimes" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Waivers for Crimes
+                                        </Link>
+                                        <Link to="/immigration/waiver-for-immigration-fraud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Waiver for Immigration Fraud and Misrep
+                                        </Link>
+                                        <Link to="/immigration/j1-waivers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            J-1 Waivers
+                                        </Link>
+                                        <Link to="/immigration/provisional-waivers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Provisional Unlawful Presence Waivers
+                                        </Link>
+                                        <Link to="/immigration/humanitarian-reinstatement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Humanitarian Reinstatement
+                                        </Link>
+                                        <Link to="/immigration/daca" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            DACA
+                                        </Link>
+                                        <Link to="/immigration/filipino-veterans-parole" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Filipino WWII Veterans Parole
+                                        </Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
+
                         </div>
 
                         {/* Bankruptcy Dropdown */}
@@ -177,6 +208,14 @@ const NavBar = () => {
                         </div>
 
                         {/* Other Links */}
+                        <a
+                            href="https://asianjournal.com/author/attygwen/"
+                            className="text-gray-800 hover:text-primary text-sm font-medium"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Publications
+                        </a>
                         <Link to="/blog" className="text-gray-800 hover:text-primary text-sm font-medium">Our Blog</Link>
                         <Link to="/#about-us" className="text-gray-800 hover:text-primary text-sm font-medium">About Us</Link>
                         <Link to="/#contact" className="text-gray-800 hover:text-primary text-sm font-medium">Contact</Link>

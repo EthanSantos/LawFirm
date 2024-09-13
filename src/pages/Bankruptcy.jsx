@@ -10,7 +10,7 @@ const Bankruptcy = () => {
     }, []);
 
     return (
-        <section className={`pt-24 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section className={`pt-36 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Title Section */}
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">
