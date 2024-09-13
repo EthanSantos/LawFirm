@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestimonialCard = ({ quote, name, image }) => {
+const TestimonialCard = ({ quote, name, image, title }) => {
     return (
         <div className="bg-gradient-to-r from-white via-gray-50 to-white p-8 rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl relative">
             <div className="flex flex-col items-center">
@@ -17,6 +17,11 @@ const TestimonialCard = ({ quote, name, image }) => {
                 <p className="font-semibold text-gray-800 mt-4 text-center">
                     - {name}
                 </p>
+                {title && (
+                    <p className="text-gray-500 text-sm text-center mt-2">
+                        {title}
+                    </p>
+                )}
             </div>
         </div>
     );

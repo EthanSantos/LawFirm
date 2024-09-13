@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ImmigrationImage from "../assets/ImmigrationPicture.png"
 
 const Immigration = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -87,7 +88,7 @@ const Immigration = () => {
 
                     {/* Image Section */}
                     <div className="flex justify-center items-center">
-                        <img src="https://via.placeholder.com/500" alt="Immigration" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
+                        <img src={ImmigrationImage} alt="Immigration" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
                     </div>
                 </div>
 

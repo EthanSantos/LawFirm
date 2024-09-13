@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BankruptcyImage from "../assets/BankruptcyImage.png"
 
 const Bankruptcy = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -46,7 +47,7 @@ const Bankruptcy = () => {
 
                     {/* Image Section */}
                     <div className="flex justify-center items-center">
-                        <img src="https://via.placeholder.com/500" alt="Bankruptcy" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
+                        <img src={BankruptcyImage} alt="Bankruptcy" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
                     </div>
                 </div>
 
