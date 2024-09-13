@@ -19,7 +19,9 @@ import CriminalWaiverPage from "../pages/ImmigrationSection/CriminalWaiver";
 import FraudWaiverPage from "../pages/ImmigrationSection/FraudWaiver";
 import J1VisaWaiversPage from "../pages/ImmigrationSection/J1Waivers";
 import ProvisionalWaiverPage from "../pages/ImmigrationSection/ProvisionalWaiver";
-
+import HumanitarianReinstatementPage from "../pages/ImmigrationSection/Humanitarian";
+import DACAInformationPage from "../pages/ImmigrationSection/Daca";
+import VeteransParole from "../pages/ImmigrationSection/VeteransParole"
 
 const routes = [
     { path: "/", element: <Home /> },
@@ -37,9 +39,9 @@ const routes = [
     { path: "/immigration/waiver-for-immigration-fraud", element: <FraudWaiverPage /> },
     { path: "/immigration/j1-waivers", element: <J1VisaWaiversPage /> },
     { path: "/immigration/provisional-waivers", element: <ProvisionalWaiverPage /> },
-    { path: "/immigration/humanitarian-reinstatement", element: <CriminalWaiverPage /> },
-    { path: "/immigration/daca", element: <CriminalWaiverPage /> },
-    { path: "/immigration/filipino-veterans-parole", element: <CriminalWaiverPage /> },
+    { path: "/immigration/humanitarian-reinstatement", element: <HumanitarianReinstatementPage /> },
+    { path: "/immigration/daca", element: <DACAInformationPage /> },
+    { path: "/immigration/filipino-veterans-parole", element: <VeteransParole /> },
   ];
   
   export default routes;
