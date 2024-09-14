@@ -10,6 +10,13 @@
   background-size: cover;
 }
 
+/* Disable parallax effect for mobile devices */
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll; /* Disables parallax on smaller screens */
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
