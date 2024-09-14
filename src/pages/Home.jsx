@@ -1,11 +1,11 @@
 import React from 'react';
 import LegalCards from '../components/LegalCards';
-import CityBackground from '../assets/CityBackground.png'; 
+import CityBackground from '../assets/CityBackground.png';
 import GwenProfile from '../assets/GwenProfile.png';
 import Calbar from '../assets/Calbar.png';
 import SupremeCourt from '../assets/SupremeCourt.png';
-import Contact from '../components/Contact'; 
-import TestimonialCard from '../components/TestimonialCard'; 
+import Contact from '../components/Contact';
+import TestimonialCard from '../components/TestimonialCard';
 import TestimonialPicture from "../assets/TestimonialPicture.jpg"
 import { motion } from 'framer-motion';
 
@@ -222,7 +222,20 @@ const Home = () => {
                             </motion.div>
                         ))}
                     </motion.div>
+
+                    <div className="text-center mt-12">
+                        <a href="/testimonials">
+                            <motion.button
+                                className="bg-primary text-white font-semibold py-3 px-6 rounded-full transition-all duration-200 ease-in-out"
+                                whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                SEE MORE REVIEWS
+                            </motion.button>
+                        </a>
+                    </div>
                 </section>
+
 
 
                 <section id="contact" className="py-12">
