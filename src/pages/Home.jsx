@@ -1,14 +1,15 @@
 import React from 'react';
 import LegalCards from '../components/LegalCards';
-import CityBackground from '../assets/CityBackground.png'; // Verify the correct path
+import CityBackground from '../assets/CityBackground.png'; 
 import GwenProfile from '../assets/GwenProfile.png';
 import Calbar from '../assets/Calbar.png';
 import SupremeCourt from '../assets/SupremeCourt.png';
-import Contact from '../components/Contact'; // Import the Contact component
+import Contact from '../components/Contact'; 
+import TestimonialCard from '../components/TestimonialCard'; 
+import TestimonialPicture from "../assets/TestimonialPicture.jpg"
 import { motion } from 'framer-motion';
 
 const Home = () => {
-
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
@@ -35,6 +36,42 @@ const Home = () => {
         { id: 2, name: 'Bankruptcy', description: 'Providing legal advice and representation in bankruptcy cases.' }
     ];
 
+    const testimonials = [
+        {
+            quote: "Atty. Gwendolyn M. Santos is a very patient and very dedicated Lawyer.She's very knowledgeable and knows how to handle all aspects of her special field. You will feel very safe and secured with her during the course of the interview on your court date. I would definitely recommend Atty. Gwendolyn Santos to anybody in need of her help & services...",
+            name: 'Alice Adriano',
+            image: 'https://lh3.googleusercontent.com/a-/ALV-UjX7iXBCW1hDc7dJc2prh6RJVFyihmoar7AlUT5_RoWOeM1uPZx3=w120-h120-p-rp-mo-br100',
+            title: "Immigration"
+        },
+        {
+            quote: "Atty Gwen has helped me so much! She is very attentive and quickly responds. She is very dedicated to her work and goes above and beyond for her clients. I will definitely recommend her to anyone that needs an attorney!",
+            name: 'Camille Mendoza',
+            image: 'https://lh3.googleusercontent.com/a-/ALV-UjUKbaW-aP_6xZBeYUemekBrz3V-uCY3xJxqsNaVbu8BXjvZca_XlA=w120-h120-p-rp-mo-br100',
+            title: "Immigration"
+        },
+        {
+            quote: 'Thankful for quality of your work and all your help. She puts extra effort for all the things that needs to be done and made sure that she is on top of it. You will never go wrong with how she works thoroughly.  Thank you Atty.',
+            name: 'Louisha Willind McNulty',
+            image: 'https://lh3.googleusercontent.com/a-/ALV-UjV4Nj1IEColt0b-JoWORexUxPyVanLosjbqkwT6Zp_6Txr3irk=w120-h120-p-rp-mo-br100',
+            title: "Immigration"
+        },
+        {
+            quote: 'Attorney Santos is very helpful with everything. She provides detailed instructions. Highly recommended!',
+            name: 'Alicia Avenido',
+            image: 'https://lh3.googleusercontent.com/a-/ALV-UjWGaZQ6bYmTOYKNNDw_d2MUY4SlYtCcbly3sKIYkQonN209CDIe=w120-h120-p-rp-mo-br100',
+        },
+        {
+            quote: 'Highly recommend to family & friends.',
+            name: 'Virginia Marte',
+            image: TestimonialPicture
+        },
+        {
+            quote: "I am one of the long-time clients of the Law Office of Gwendolyn Santos. Atty. Santos has assisted me in all of my legal cases - immigration, divorce and even my personal injury case. She is willing to do everything to win and support her clients. For me, she is the beat attorney. Thank you very much!",
+            name: "Adonis T. Ciokon",
+            image: "https://lh3.googleusercontent.com/a-/ALV-UjUoRa2tYtEslbPanx1HKhi6JuUQI-6lKRI2oiTNOONhLMCZk1D8=w120-h120-p-rp-mo-br100"
+        },
+    ];
+
     return (
         <main className="pt-16">
             <header
@@ -45,9 +82,7 @@ const Home = () => {
                     height: '650px'
                 }}
             >
-
                 <div className="flex flex-col items-center mt-4">
-
                     <motion.h1
                         className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
                         initial="hidden"
@@ -85,7 +120,6 @@ const Home = () => {
                 </motion.div>
             </header>
 
-
             <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6">
                 <section className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">OUR PRACTICE AREAS</h2>
@@ -114,9 +148,7 @@ const Home = () => {
                         variants={fadeInUp}
                     >
                         <div className="text-left p-4 rounded-lg">
-                            <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">
-                                Our Firm
-                            </h3>
+                            <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Our Firm</h3>
                             <p className="text-base sm:text-lg mb-4">
                                 The Law Office of Gwendolyn M. Santos is a law firm located at the Mid-Wilshire District in Los Angeles, CA. Our practice areas are Immigration and Naturalization, Bankruptcy, and Family Law.
                             </p>
@@ -165,6 +197,33 @@ const Home = () => {
                         </div>
                     </motion.div>
                 </motion.section>
+
+                <section className="my-16">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-12">Built by Reputation</h2>
+                    <motion.div
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        {testimonials.map((testimonial, index) => (
+                            <motion.div
+                                key={index}
+                                variants={fadeInUp}
+                                whileHover={{ scale: 1.05 }}
+                                className="transition-transform"
+                            >
+                                <TestimonialCard
+                                    quote={testimonial.quote}
+                                    name={testimonial.name}
+                                    image={testimonial.image}
+                                    title={testimonial.title}
+                                />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </section>
+
 
                 <section id="contact" className="py-12">
                     <Contact />

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import TestimonialPicture from "../assets/TestimonialPicture.jpg"
-import AvvoIcon from "../assets/AvvoIcon.jsx"
+import TestimonialPicture from "../assets/TestimonialPicture.jpg";
+import AvvoIcon from "../assets/AvvoIcon.jsx";
+import TestimonialCard from '../components/TestimonialCard'; // Import TestimonialCard component
 
 const Testimonials = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -172,31 +173,14 @@ const Testimonials = () => {
                                 variants={itemVariants}
                                 className="cursor-pointer hover-card"
                             >
-                                <div className="bg-gradient-to-r from-white via-gray-50 to-white p-8 rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:rotate-1 relative">
-                                    <div className="flex flex-col items-center">
-                                        {testimonial.image && (
-                                            <img
-                                                src={testimonial.image}
-                                                alt={`Profile picture of ${testimonial.name}`}
-                                                className="w-20 h-20 sm:w-32 sm:h-32 rounded-full border-4 border-gradient-to-r from-blue-400 to-teal-400 shadow-lg -mt-12"
-                                            />
-                                        )}
-                                        <p className="text-gray-700 text-lg mt-6 sm:text-xl font-light leading-relaxed text-center">
-                                            "{testimonial.quote}"
-                                        </p>
-                                        <p className="font-semibold text-gray-800 mt-4 text-center">
-                                            - {testimonial.name}
-                                        </p>
-                                        {testimonial.title && (
-                                            <p className="text-gray-500 text-sm text-center mt-2">
-                                                {testimonial.title}
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
+                                <TestimonialCard
+                                    quote={testimonial.quote}
+                                    name={testimonial.name}
+                                    image={testimonial.image}
+                                    title={testimonial.title}
+                                />
                             </motion.div>
                         ))}
-
                     </motion.div>
                 </div>
 
@@ -218,7 +202,7 @@ const Testimonials = () => {
                             rel="noopener noreferrer"
                             className="btn btn-outline btn-primary flex items-center space-x-2"
                         >
-                            <AvvoIcon className="w-6 h-6 text-primary" /> {/* This will inherit the primary color */}
+                            <AvvoIcon className="w-6 h-6 text-primary" />
                             <span>AVVO</span>
                         </a>
                         <a
@@ -240,10 +224,7 @@ const Testimonials = () => {
                             <span>Google</span>
                         </a>
                     </div>
-
                 </div>
-
-
             </motion.div>
         </div>
     );

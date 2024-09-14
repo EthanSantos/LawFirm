@@ -167,6 +167,9 @@ const NavBar = () => {
                                         <Link to="/immigration/filipino-veterans-parole" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Filipino WWII Veterans Parole
                                         </Link>
+                                        <Link to="/immigration/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            FAQ on Immigration
+                                        </Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>

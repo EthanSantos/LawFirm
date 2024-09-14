@@ -21,6 +21,7 @@ import ProvisionalWaiverPage from "../pages/ImmigrationSection/ProvisionalWaiver
 import HumanitarianReinstatementPage from "../pages/ImmigrationSection/Humanitarian";
 import DACAInformationPage from "../pages/ImmigrationSection/Daca";
 import VeteransParole from "../pages/ImmigrationSection/VeteransParole"
+import ImmigrationFAQ from "../pages/ImmigrationSection/ImmigrationFAQ";
 
 const routes = [
     { path: "/", element: <Home /> },
@@ -42,6 +43,7 @@ const routes = [
     { path: "/immigration/humanitarian-reinstatement", element: <HumanitarianReinstatementPage /> },
     { path: "/immigration/daca", element: <DACAInformationPage /> },
     { path: "/immigration/filipino-veterans-parole", element: <VeteransParole /> },
+    { path: "/immigration/faq", element: <ImmigrationFAQ /> },
   ];
   
   export default routes;

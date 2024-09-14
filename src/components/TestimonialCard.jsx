@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const TestimonialCard = ({ quote, name, image, title }) => {
     return (
@@ -14,6 +16,11 @@ const TestimonialCard = ({ quote, name, image, title }) => {
                 <p className="text-gray-700 text-lg mt-6 sm:text-xl font-light leading-relaxed text-center">
                     "{quote}"
                 </p>
+                <div className="flex mt-4 space-x-1">
+                    {[...Array(5)].map((star, index) => (
+                        <FontAwesomeIcon key={index} icon={faStar} className="text-yellow-400" />
+                    ))}
+                </div>
                 <p className="font-semibold text-gray-800 mt-4 text-center">
                     - {name}
                 </p>
