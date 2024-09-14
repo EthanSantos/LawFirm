@@ -9,6 +9,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import TestimonialPicture from "../assets/TestimonialPicture.jpg"
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FiPhoneCall, FiGlobe, FiDollarSign } from 'react-icons/fi';
 
 const Home = () => {
     const fadeInUp = {
@@ -16,25 +17,21 @@ const Home = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
     };
 
-    const buttonHover = {
-        scale: 1.05,
-        boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
-        transition: {
-            duration: 0.2,
-            ease: "easeInOut"
-        }
-    };
-
-    const buttonTap = {
-        scale: 0.9,
-        rotate: -5,
-        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-        transition: { duration: 0.2, ease: "easeInOut" }
-    };
-
     const areas = [
-        { id: 1, name: 'Immigration', description: 'Assisting families and businesses in navigating the complexities of the immigration system.' },
-        { id: 2, name: 'Bankruptcy', description: 'Providing legal advice and representation in bankruptcy cases.' }
+        {
+            id: 1,
+            name: 'Immigration',
+            description: 'Assisting families and businesses in navigating the complexities of the immigration system.',
+            link: '/immigration',
+            icon: <FiGlobe className="text-primary w-10 h-10" />
+        },
+        {
+            id: 2,
+            name: 'Bankruptcy',
+            description: 'Providing legal advice and representation in bankruptcy cases.',
+            link: '/bankruptcy',
+            icon: <FiDollarSign className="text-primary w-10 h-10" />
+        }
     ];
 
     const testimonials = [
@@ -112,13 +109,22 @@ const Home = () => {
                 >
                     <a href="tel:+12132845984" className="inline-block">
                         <motion.button
-                            className="bg-white text-primary font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-200 ease-in-out"
-                            whileHover={buttonHover}
-                            whileTap={buttonTap}
+                            className="bg-primary text-white font-semibold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition-all duration-200 ease-in-out flex items-center justify-center space-x-2"
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.4)"
+                            }}
+                            whileTap={{
+                                scale: 0.95,
+                                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)"
+                            }}
+                            aria-label="Call the law firm at (213) 284-5984"
                         >
-                            CALL US AT (213) 284-5984
+                            <FiPhoneCall className="w-6 h-6" /> {/* Phone icon */}
+                            <span>Call us at (213) 284-5984</span>
                         </motion.button>
                     </a>
+
                 </motion.div>
             </header>
 
@@ -126,12 +132,13 @@ const Home = () => {
                 <section className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">OUR PRACTICE AREAS</h2>
                     <div className="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-6 sm:gap-8">
-                        {areas.map((area) => (
+                        {areas.map((area, index) => (
                             <LegalCards
-                                key={area.id}
-                                number={area.id}
+                                key={index}
                                 area={area.name}
                                 description={area.description}
+                                link={area.link}     // Pass the link as a prop
+                                icon={area.icon}     // Pass the icon as a prop
                             />
                         ))}
                     </div>
@@ -146,7 +153,7 @@ const Home = () => {
                     variants={fadeInUp}
                 >
                     <motion.div
-                        className="md:w-1/2 bg-primary text-white py-8 px-6 sm:py-12 sm:px-8"
+                        className="md:w-1/2 bg-secondary text-white py-8 px-6 sm:py-12 sm:px-8"
                         variants={fadeInUp}
                     >
                         <div className="text-left p-4 rounded-lg">
@@ -170,7 +177,7 @@ const Home = () => {
                     </motion.div>
 
                     <motion.div
-                        className="md:w-1/2 bg-secondary text-white py-8 px-6 flex flex-col items-center justify-center"
+                        className="md:w-1/2 bg-primary text-white py-8 px-6 flex flex-col items-center justify-center"
                         variants={fadeInUp}
                     >
                         <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Meet Our Attorney</h3>
