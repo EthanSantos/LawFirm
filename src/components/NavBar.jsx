@@ -85,13 +85,15 @@ const NavBar = () => {
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     <div className="flex items-center">
-                        <img
-                            src={logo}
-                            alt="Logo"
-                            className="w-12 h-12 sm:w-16 sm:h-16 mr-4"
-                        />
-                        <Link to="/#home" onClick={handleMenuClose} className="text-xl sm:text-2xl text-primary font-bold hover:text-primary">
-                            LAW OFFICES OF GWENDOLYN M. SANTOS
+                        <Link to="/#home" onClick={handleMenuClose} className="flex items-center">
+                            <img
+                                src={logo}
+                                alt="Logo"
+                                className="w-12 h-12 sm:w-16 sm:h-16 mr-4"
+                            />
+                            <span className="text-xl sm:text-2xl text-primary font-bold hover:text-primary">
+                                LAW OFFICES OF GWENDOLYN M. SANTOS
+                            </span>
                         </Link>
                     </div>
 
