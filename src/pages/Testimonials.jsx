@@ -241,8 +241,6 @@ const Testimonials = () => {
                         </a>
                     </div>
 
-
-
                 </div>
 
 
