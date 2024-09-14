@@ -15,10 +15,10 @@ const Home = () => {
     };
 
     const buttonHover = {
-        scale: 1.05, // Slight scale up on hover
-        boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)", // Soft shadow on hover
+        scale: 1.05,
+        boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
         transition: {
-            duration: 0.2, // Quick transition
+            duration: 0.2,
             ease: "easeInOut"
         }
     };
@@ -45,9 +45,9 @@ const Home = () => {
                     height: '650px'
                 }}
             >
-                {/* Top Text Section */}
+
                 <div className="flex flex-col items-center mt-4">
-                    {/* Animated Heading */}
+
                     <motion.h1
                         className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
                         initial="hidden"
@@ -57,7 +57,6 @@ const Home = () => {
                         RESPECTED AND EXPERIENCED
                     </motion.h1>
 
-                    {/* Animated Subheading */}
                     <motion.p
                         className="mt-2 max-w-xl mx-auto text-base sm:text-lg drop-shadow"
                         initial="hidden"
@@ -68,7 +67,6 @@ const Home = () => {
                     </motion.p>
                 </div>
 
-                {/* Bottom Button Section */}
                 <motion.div
                     className="mt-auto mb-12 flex justify-center items-center"
                     initial="hidden"
@@ -111,7 +109,6 @@ const Home = () => {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    {/* Our Firm Section */}
                     <motion.div
                         className="md:w-1/2 bg-primary text-white py-8 px-6 sm:py-12 sm:px-8"
                         variants={fadeInUp}
@@ -138,13 +135,12 @@ const Home = () => {
                         </div>
                     </motion.div>
 
-                    {/* Meet Our Attorney Section */}
                     <motion.div
                         className="md:w-1/2 bg-secondary text-white py-8 px-6 flex flex-col items-center justify-center"
                         variants={fadeInUp}
                     >
                         <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Meet Our Attorney</h3>
-                        {/* Animated Attorney Image */}
+
                         <motion.img
                             src={GwenProfile}
                             alt="Attorney Gwendolyn M. Santos"
@@ -152,7 +148,7 @@ const Home = () => {
                             whileHover={{ scale: 1.05 }}
                         />
                         <h4 className="text-lg sm:text-xl font-bold mt-4">Gwendolyn Malaya-Santos</h4>
-                        {/* Credentials Logos */}
+
                         <div className="flex justify-center mt-6 space-x-4 sm:space-x-8">
                             <motion.img
                                 src={Calbar}

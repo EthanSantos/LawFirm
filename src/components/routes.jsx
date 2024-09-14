@@ -1,5 +1,3 @@
-// Routes.js
-
 import Home from "../pages/Home";
 import Testimonials from "../pages/Testimonials";
 import Immigration from "../pages/Immigration";

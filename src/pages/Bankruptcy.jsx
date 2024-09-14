@@ -13,13 +13,13 @@ const Bankruptcy = () => {
     return (
         <section className={`pt-36 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Title Section */}
+
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">
                     Bankruptcy
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {/* Text Section */}
+
                     <div className="flex flex-col justify-center">
                         <p className="text-xl text-gray-800 mb-6 leading-relaxed">
                             We have successfully represented individual consumers and small enterprises with quality representation in Chapter 7 and Chapter 13 bankruptcy petitions. We assist clients overwhelmed with debts, facing foreclosure, garnishment, repossession, and collection cases.
@@ -45,7 +45,6 @@ const Bankruptcy = () => {
                         </ul>
                     </div>
 
-                    {/* Image Section */}
                     <div className="flex justify-center items-center">
                         <img src={BankruptcyImage} alt="Bankruptcy" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
                     </div>

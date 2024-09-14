@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-    // Framer Motion Variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
@@ -18,7 +17,6 @@ const Contact = () => {
             variants={fadeInUp}
         >
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
-                {/* Contact Details */}
                 <motion.div
                     className="w-full md:w-1/2"
                     variants={fadeInUp}

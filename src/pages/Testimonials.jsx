@@ -8,7 +8,7 @@ const Testimonials = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsVisible(true);
-        }, 100); // Delay to ensure animation is visible
+        }, 100);
     }, []);
 
     const containerVariants = {

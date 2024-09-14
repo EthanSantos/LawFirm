@@ -17,7 +17,7 @@ const Immigration = () => {
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">
                     Immigration
                 </h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {/* Text Section */}
                     <div className="flex flex-col justify-center">

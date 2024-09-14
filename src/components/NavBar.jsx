@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/GMSLogo.png'; // Adjust the path as needed
+import logo from '../assets/GMSLogo.png'; 
 
 const NavBar = () => {
     const navbarRef = useRef(null);
@@ -79,7 +79,7 @@ const NavBar = () => {
         <div className="bg-white fixed w-full z-50 top-0" ref={navbarRef}>
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
-                    {/* Logo Section */}
+
                     <div className="flex items-center">
                         <img
                             src={logo}
@@ -125,7 +125,7 @@ const NavBar = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            
+
                             <AnimatePresence>
                                 {isImmigrationDropdownOpen && (
                                     <motion.div
