@@ -51,6 +51,7 @@ const NavBar = () => {
         if (e.target === e.currentTarget) {
             navigate('/immigration');
             setIsImmigrationDropdownOpen(false);
+            setIsMenuOpen(false);
         }
     };
 
@@ -58,6 +59,7 @@ const NavBar = () => {
         if (e.target === e.currentTarget) {
             navigate('/bankruptcy');
             setIsBankruptcyDropdownOpen(false);
+            setIsMenuOpen(false);
         }
     };
 
