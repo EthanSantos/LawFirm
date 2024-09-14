@@ -13,7 +13,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <p className="text-sm mb-2">
-                    © 2024 GMS LALEGAL LAW OFFICE OF GWENDOLYN M. SANTOS
+                    © 2024 GMS LA LEGAL LAW OFFICE OF GWENDOLYN M. SANTOS
                 </p>
                 <p className="text-sm mb-2">
                     3450 Wilshire Blvd Ste 1200, Los Angeles, CA 90010

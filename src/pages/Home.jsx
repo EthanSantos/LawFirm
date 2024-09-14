@@ -90,8 +90,9 @@ const Home = () => {
                         animate="visible"
                         variants={fadeInUp}
                     >
-                        RESPECTED AND EXPERIENCED
+                        Dedicated to <span className="italic">your</span> Case
                     </motion.h1>
+
 
                     <motion.p
                         className="mt-2 max-w-xl mx-auto text-base sm:text-lg drop-shadow"
@@ -186,14 +187,12 @@ const Home = () => {
                             <motion.img
                                 src={Calbar}
                                 alt="California Bar Association"
-                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                                whileHover={{ scale: 1.1 }}
+                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300"
                             />
                             <motion.img
                                 src={SupremeCourt}
                                 alt="Supreme Court of the Philippines"
-                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                                whileHover={{ scale: 1.1 }}
+                                className="w-16 h-16 sm:w-24 sm:h-24 transition-all duration-300"
                             />
                         </div>
                     </motion.div>

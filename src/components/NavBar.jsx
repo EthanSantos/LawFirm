@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/GMSLogo.png'; 
+import logo from '../assets/GMSLogo.png';
 
 const NavBar = () => {
     const navbarRef = useRef(null);
@@ -75,29 +75,40 @@ const NavBar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    // Close the menu after clicking a link
+    const handleMenuClose = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <div className="bg-white fixed w-full z-50 top-0" ref={navbarRef}>
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
-
                     <div className="flex items-center">
                         <img
                             src={logo}
                             alt="Logo"
                             className="w-12 h-12 sm:w-16 sm:h-16 mr-4"
                         />
-                        <Link to="/#home" className="text-xl sm:text-2xl text-primary font-bold hover:text-primary">
+                        <Link to="/#home" onClick={handleMenuClose} className="text-xl sm:text-2xl text-primary font-bold hover:text-primary">
                             LAW OFFICES OF GWENDOLYN M. SANTOS
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="sm:hidden">
-                        <button onClick={toggleMenu} className="text-gray-800 text-lg">
+                        <button
+                            onClick={toggleMenu}
+                            className="text-gray-800 text-lg focus:outline-none focus:ring-2 focus:ring-primary rounded"
+                        >
                             {isMenuOpen ? (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
                             ) : (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
                             )}
                         </button>
                     </div>
@@ -105,7 +116,9 @@ const NavBar = () => {
                     {/* Menu for Mobile and Desktop */}
                     <div className={`${isMenuOpen ? "flex" : "hidden"
                         } sm:flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0 absolute sm:relative top-full sm:top-auto left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent`}>
-                        <Link to="/testimonials" className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
+
+                        {/* Call handleMenuClose to close the menu on link click */}
+                        <Link to="/testimonials" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
 
                         {/* Immigration Dropdown */}
                         <div className="relative" ref={immigrationDropdownRef}>
@@ -134,40 +147,40 @@ const NavBar = () => {
                                         exit={{ opacity: 0, y: -10 }}
                                         className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10"
                                     >
-                                        <Link to="/immigration/naturalization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/naturalization" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Naturalization/Citizenship
                                         </Link>
-                                        <Link to="/immigration/family-based" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/family-based" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Family-Based Immigration Petition
                                         </Link>
-                                        <Link to="/immigration/fiance-visa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/fiance-visa" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Fiance Visa
                                         </Link>
-                                        <Link to="/immigration/o-visa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/o-visa" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             O Visa
                                         </Link>
-                                        <Link to="/immigration/waivers-for-crimes" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/waivers-for-crimes" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Waivers for Crimes
                                         </Link>
-                                        <Link to="/immigration/waiver-for-immigration-fraud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                            Waiver for Immigration Fraud and Misrep
+                                        <Link to="/immigration/waiver-for-immigration-fraud" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Waiver for Immigration Fraud and Misrepresentation
                                         </Link>
-                                        <Link to="/immigration/j1-waivers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/j1-waivers" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             J-1 Waivers
                                         </Link>
-                                        <Link to="/immigration/provisional-waivers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/provisional-waivers" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Provisional Unlawful Presence Waivers
                                         </Link>
-                                        <Link to="/immigration/humanitarian-reinstatement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/humanitarian-reinstatement" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Humanitarian Reinstatement
                                         </Link>
-                                        <Link to="/immigration/daca" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/daca" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             DACA
                                         </Link>
-                                        <Link to="/immigration/filipino-veterans-parole" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/filipino-veterans-parole" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             Filipino WWII Veterans Parole
                                         </Link>
-                                        <Link to="/immigration/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <Link to="/immigration/faq" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             FAQ on Immigration
                                         </Link>
                                     </motion.div>
@@ -202,9 +215,15 @@ const NavBar = () => {
                                         exit={{ opacity: 0, y: -10 }}
                                         className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10"
                                     >
-                                        <Link to="/bankruptcy/chapter-7" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chapter 7 Bankruptcy Petition</Link>
-                                        <Link to="/bankruptcy/chapter-13" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chapter 13 Bankruptcy Petition</Link>
-                                        <Link to="/bankruptcy/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ On Bankruptcy</Link>
+                                        <Link to="/bankruptcy/chapter-7" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Chapter 7 Bankruptcy Petition
+                                        </Link>
+                                        <Link to="/bankruptcy/chapter-13" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Chapter 13 Bankruptcy Petition
+                                        </Link>
+                                        <Link to="/bankruptcy/faq" onClick={handleMenuClose} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            FAQ On Bankruptcy
+                                        </Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -213,15 +232,16 @@ const NavBar = () => {
                         {/* Other Links */}
                         <a
                             href="https://asianjournal.com/author/attygwen/"
+                            onClick={handleMenuClose}
                             className="text-gray-800 hover:text-primary text-sm font-medium"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Publications
                         </a>
-                        <Link to="/blog" className="text-gray-800 hover:text-primary text-sm font-medium">Our Blog</Link>
-                        <Link to="/#about-us" className="text-gray-800 hover:text-primary text-sm font-medium">About Us</Link>
-                        <Link to="/#contact" className="text-gray-800 hover:text-primary text-sm font-medium">Contact</Link>
+                        <Link to="/blog" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Our Blog</Link>
+                        <Link to="/#about-us" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">About Us</Link>
+                        <Link to="/#contact" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Contact</Link>
                     </div>
                 </div>
             </div>
