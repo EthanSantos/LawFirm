@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import TestimonialPicture from "../assets/TestimonialPicture.jpg"
+import AvvoIcon from "../assets/AvvoIcon.jsx"
 
 const Testimonials = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -40,12 +43,19 @@ const Testimonials = () => {
             quote: "Atty. Gwendolyn M. Santos is a very patient and very dedicated Lawyer.She's very knowledgeable and knows how to handle all aspects of her special field. You will feel very safe and secured with her during the course of the interview on your court date. I would definitely recommend Atty. Gwendolyn Santos to anybody in need of her help & services...",
             name: 'Alice Adriano',
             image: 'https://lh3.googleusercontent.com/a-/ALV-UjX7iXBCW1hDc7dJc2prh6RJVFyihmoar7AlUT5_RoWOeM1uPZx3=w120-h120-p-rp-mo-br100',
-            title: "Immigration Services"
+            title: "Immigration"
+        },
+        {
+            quote: "Atty Gwen has helped me so much! She is very attentive and quickly responds. She is very dedicated to her work and goes above and beyond for her clients. I will definitely recommend her to anyone that needs an attorney!",
+            name: 'Camille Mendoza',
+            image: 'https://lh3.googleusercontent.com/a-/ALV-UjUKbaW-aP_6xZBeYUemekBrz3V-uCY3xJxqsNaVbu8BXjvZca_XlA=w120-h120-p-rp-mo-br100',
+            title: "Immigration"
         },
         {
             quote: 'Thankful for quality of your work and all your help. She puts extra effort for all the things that needs to be done and made sure that she is on top of it. You will never go wrong with how she works thoroughly.  Thank you Atty.',
             name: 'Louisha Willind McNulty',
             image: 'https://lh3.googleusercontent.com/a-/ALV-UjV4Nj1IEColt0b-JoWORexUxPyVanLosjbqkwT6Zp_6Txr3irk=w120-h120-p-rp-mo-br100',
+            title: "Immigration"
         },
         {
             quote: 'Attorney Santos is very helpful with everything. She provides detailed instructions. Highly recommended!',
@@ -189,6 +199,53 @@ const Testimonials = () => {
 
                     </motion.div>
                 </div>
+
+                <div className="mt-12 text-center">
+                    <h3 className="text-2xl font-semibold text-primary mb-4">Read More Reviews</h3>
+
+                    <div className="flex justify-center mb-4">
+                        <span className="text-yellow-400 text-2xl">★</span>
+                        <span className="text-yellow-400 text-2xl">★</span>
+                        <span className="text-yellow-400 text-2xl">★</span>
+                        <span className="text-yellow-400 text-2xl">★</span>
+                        <span className="text-yellow-400 text-2xl">★</span>
+                    </div>
+
+                    <div className="flex justify-center space-x-6">
+                        <a
+                            href="https://www.avvo.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                        >
+                            <AvvoIcon className="w-6 h-6 text-primary" /> {/* This will inherit the primary color */}
+                            <span>AVVO</span>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                        >
+                            <FontAwesomeIcon icon={faFacebook} className="w-6 h-6" />
+                            <span>Facebook</span>
+                        </a>
+                        <a
+                            href="https://www.google.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                        >
+                            <FontAwesomeIcon icon={faGoogle} className="w-6 h-6" />
+                            <span>Google</span>
+                        </a>
+                    </div>
+
+
+
+                </div>
+
+
             </motion.div>
         </div>
     );
