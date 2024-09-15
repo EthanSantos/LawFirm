@@ -118,10 +118,6 @@ const NavBar = () => {
                     <div className={`${isMenuOpen ? "flex" : "hidden"
                         } sm:flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0 absolute sm:relative top-full sm:top-auto left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent`}>
 
-
-                        {/* Call handleMenuClose to close the menu on link click */}
-                        <Link to="/testimonials" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
-
                         {/* Immigration Dropdown */}
                         <div className="relative" ref={immigrationDropdownRef}>
                             <button
@@ -231,7 +227,8 @@ const NavBar = () => {
                             </AnimatePresence>
                         </div>
 
-                        {/* Other Links */}
+                        <Link to="/testimonials" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
+
                         <a
                             href="https://asianjournal.com/author/attygwen/"
                             onClick={handleMenuClose}
@@ -241,13 +238,13 @@ const NavBar = () => {
                         >
                             Publications
                         </a>
-                        <Link to="/blog" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Our Blog</Link>
+                        <Link to="/blog" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Blog</Link>
                         <Link to="/#about-us" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">About</Link>
                         <Link to="/#contact" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Contact</Link>
                         <a
                             href="tel:+12132845984"
                             onClick={handleMenuClose}
-                            className="bg-primary hover:bg-secondary text-white text-sm font-medium rounded-xl px-6 py-3 transition duration-300 ease-in-out inline-flex items-center justify-center"
+                            className="bg-primary hover:bg-secondary text-white text-center text-sm font-medium rounded-xl px-6 py-3 transition duration-300 ease-in-out inline-flex items-center justify-center"
                             rel="noopener noreferrer"
                         >
                             Book a Consultation
