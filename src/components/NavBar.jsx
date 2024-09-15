@@ -83,13 +83,13 @@ const NavBar = () => {
     };
 
     return (
-        <div className="bg-white fixed w-full z-50 top-0" ref={navbarRef}>
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white fixed w-full z-50 top-0 border-b border-gray-200" ref={navbarRef}>
+            <div className="px-6">
                 <div className="flex justify-between items-center py-4">
-                    <div className="flex items-center">
+                    <div className="flex items-left">
                         <Link to="/#home" onClick={handleMenuClose} className="flex items-center">
                             <img src={logo} alt="Logo" className="w-12 h-12 sm:w-16 sm:h-16 mr-4" />
-                            <span className="hidden md:flex text-xl sm:text-2xl text-primary font-bold hover:text-primary">
+                            <span className="hidden md:flex text-xl sm:text-2xl text-primary font-bold hover:text-secondary">
                                 LAW OFFICES OF GWENDOLYN M. SANTOS
                             </span>
                         </Link>
@@ -116,7 +116,8 @@ const NavBar = () => {
 
                     {/* Menu for Mobile and Desktop */}
                     <div className={`${isMenuOpen ? "flex" : "hidden"
-                        } sm:flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0 absolute sm:relative top-full sm:top-auto left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent`}>
+                        } sm:flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 p-4 sm:p-0 absolute sm:relative top-full sm:top-auto left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent`}>
+
 
                         {/* Call handleMenuClose to close the menu on link click */}
                         <Link to="/testimonials" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Testimonials</Link>
@@ -241,8 +242,16 @@ const NavBar = () => {
                             Publications
                         </a>
                         <Link to="/blog" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Our Blog</Link>
-                        <Link to="/#about-us" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">About Us</Link>
+                        <Link to="/#about-us" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">About</Link>
                         <Link to="/#contact" onClick={handleMenuClose} className="text-gray-800 hover:text-primary text-sm font-medium">Contact</Link>
+                        <a
+                            href="tel:+12132845984"
+                            onClick={handleMenuClose}
+                            className="bg-primary hover:bg-secondary text-white text-sm font-medium rounded-xl px-6 py-3 transition duration-300 ease-in-out inline-flex items-center justify-center"
+                            rel="noopener noreferrer"
+                        >
+                            Book a Consultation
+                        </a>
                     </div>
                 </div>
             </div>

@@ -102,30 +102,35 @@ const Home = () => {
                 </div>
 
                 <motion.div
-                    className="mt-auto mb-12 flex justify-center items-center"
+                    className="flex justify-center items-center w-full min-h-screen" // Ensures that the container takes at least the height of the screen
                     initial="hidden"
                     animate="visible"
                     variants={{ ...fadeInUp, transition: { duration: 1.4, ease: 'easeOut' } }}
                 >
-                    <a href="tel:+12132845984" className="inline-block">
-                        <motion.button
-                            className="bg-primary text-white font-semibold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition-all duration-200 ease-in-out flex items-center justify-center space-x-2"
-                            whileHover={{
-                                scale: 1.05,
-                                boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.4)"
-                            }}
-                            whileTap={{
-                                scale: 0.95,
-                                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)"
-                            }}
-                            aria-label="Call the law firm at (213) 284-5984"
-                        >
-                            <FiPhoneCall className="w-6 h-6" /> {/* Phone icon */}
-                            <span>Call us at (213) 284-5984</span>
-                        </motion.button>
-                    </a>
-
+                    <div className="flex flex-col justify-center items-center h-full p-4" // Additional padding and flex properties for internal spacing
+                        style={{ minHeight: 'calc(100vh - 100px)' }} // Adjust according to your header/footer height
+                    >
+                        <a href="tel:+12132845984" className="inline-block">
+                            <motion.button
+                                className="bg-primary text-white font-semibold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl hover:bg-secondary transition-all duration-200 ease-in-out flex items-center justify-center space-x-2"
+                                whileHover={{
+                                    scale: 1.05,
+                                    boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.4)"
+                                }}
+                                whileTap={{
+                                    scale: 0.95,
+                                    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)"
+                                }}
+                                aria-label="Call the law firm at (213) 284-5984"
+                            >
+                                <FiPhoneCall className="w-6 h-6" /> {/* Phone icon */}
+                                <span>Call us at (213) 284-5984</span>
+                            </motion.button>
+                        </a>
+                    </div>
                 </motion.div>
+
+
             </header>
 
             <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6">
