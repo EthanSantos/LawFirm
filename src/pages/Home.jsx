@@ -84,13 +84,13 @@ const Home = () => {
 
             <header
                 id="home"
-                className="parallax text-white text-center py-12 px-6 bg-cover bg-center relative flex flex-col justify-between items-center"
+                className="parallax text-white text-center py-12 px-6 bg-cover bg-center relative"
                 style={{
                     backgroundImage: `url(${CityBackground})`,
                     height: '650px'
                 }}
             >
-                <div className="flex flex-col items-center mt-4">
+                <div className="flex flex-col items-center justify-start h-full pt-4"> 
                     <motion.h1
                         className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
                         initial="hidden"
@@ -99,7 +99,6 @@ const Home = () => {
                     >
                         Dedicated to <span className="italic">your</span> Case
                     </motion.h1>
-
 
                     <motion.p
                         className="mt-2 max-w-xl mx-auto text-base sm:text-lg drop-shadow"
@@ -112,14 +111,12 @@ const Home = () => {
                 </div>
 
                 <motion.div
-                    className="flex justify-center items-center w-full min-h-screen" // Ensures that the container takes at least the height of the screen
+                    className="absolute bottom-8 left-0 right-0 px-4" 
                     initial="hidden"
                     animate="visible"
                     variants={{ ...fadeInUp, transition: { duration: 1.4, ease: 'easeOut' } }}
                 >
-                    <div className="flex flex-col justify-center items-center h-full p-4" // Additional padding and flex properties for internal spacing
-                        style={{ minHeight: 'calc(100vh - 100px)' }} // Adjust according to your header/footer height
-                    >
+                    <div className="flex justify-center items-center w-full">
                         <a href="tel:+12132845984" className="inline-block">
                             <motion.button
                                 className="bg-primary text-white font-semibold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl hover:bg-secondary transition-all duration-200 ease-in-out flex items-center justify-center space-x-2"
@@ -133,15 +130,14 @@ const Home = () => {
                                 }}
                                 aria-label="Call the law firm at (213) 284-5984"
                             >
-                                <FiPhoneCall className="w-6 h-6" /> {/* Phone icon */}
+                                <FiPhoneCall className="w-6 h-6" />
                                 <span>Call us at (213) 284-5984</span>
                             </motion.button>
                         </a>
                     </div>
                 </motion.div>
-
-
             </header>
+
 
             <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6">
                 <section className="text-center mb-16">
@@ -152,8 +148,8 @@ const Home = () => {
                                 key={index}
                                 area={area.name}
                                 description={area.description}
-                                link={area.link}     // Pass the link as a prop
-                                icon={area.icon}     // Pass the icon as a prop
+                                link={area.link}  
+                                icon={area.icon}  
                             />
                         ))}
                     </div>
