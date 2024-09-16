@@ -1,0 +1,15 @@
+{
+    "redirects": [
+      {
+        "source": "/about-us",
+        "destination": "/#about-us",
+        "permanent": true
+      },
+      {
+        "source": "/",
+        "destination": "/#home",
+        "permanent": true
+      }
+    ]
+  }
+  
