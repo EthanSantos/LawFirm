@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import TestimonialPicture from "../assets/TestimonialPicture.jpg";
 import AvvoIcon from "../assets/AvvoIcon.jsx";
-import TestimonialCard from '../components/TestimonialCard'; // Import TestimonialCard component
+import TestimonialCard from '../components/TestimonialCard'; 
+import { Helmet } from 'react-helmet';
 
 const Testimonials = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -152,6 +153,15 @@ const Testimonials = () => {
 
     return (
         <div className="pt-36 bg-gray-100 py-16">
+            <Helmet>
+                <title>Client Testimonials - Gwendolyn Santos Law Firm | Trusted Legal Expertise</title>
+                <meta name="description" content="Read real testimonials from clients who have benefited from the legal services provided by Gwendolyn Law Firm in Los Angeles. Discover why our clients trust us with their critical legal needs." />
+                <meta name="keywords" content="Gwendolyn Law Firm reviews, client testimonials, Los Angeles lawyer feedback, trusted attorney, legal services testimonials" />
+                <meta property="og:title" content="Client Testimonials - Gwendolyn Santos Law Firm | Trusted Legal Expertise" />
+                <meta property="og:description" content="Explore testimonials from our satisfied clients and understand why Gwendolyn Law Firm is highly recommended for legal services in Los Angeles." />
+                <meta property="og:url" content="https://www.gms-la-legal.com/testimonials" />
+                <meta property="og:type" content="website" />
+            </Helmet>
             <motion.div
                 className="container mx-auto px-4 sm:px-6 lg:px-8"
                 initial="hidden"

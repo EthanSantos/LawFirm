@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BankruptcyImage from "../assets/BankruptcyImage.png"
+import { Helmet } from 'react-helmet';
 
 const Bankruptcy = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,12 +13,18 @@ const Bankruptcy = () => {
 
     return (
         <section className={`pt-36 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Helmet>
+                <title>Bankruptcy Law - Gwendolyn Santos Law Firm</title>
+                <meta name="description" content="Confidential and compassionate bankruptcy counseling to regain control of your financial situation." />
+                <meta property="og:title" content="Bankruptcy Law - Gwendolyn Santos Law Firm" />
+                <meta property="og:description" content="Effective bankruptcy solutions to relieve debt and protect your assets, tailored by Gwendolyn Law Firm." />
+            </Helmet>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">
                     Bankruptcy
                 </h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
                     <div className="flex flex-col justify-center">

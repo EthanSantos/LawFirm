@@ -29,9 +29,11 @@ const routes = [
     { path: "/immigration", element: <Immigration /> },
     { path: "/bankruptcy", element: <Bankruptcy /> },
     { path: "/blog", element: <Blog /> },
+    
     { path: "/bankruptcy/chapter-7", element: <Chapter7Bankruptcy /> },
     { path: "/bankruptcy/chapter-13", element: <Chapter13Bankruptcy /> },
     { path: "/bankruptcy/faq", element: <BankruptcyFAQ /> },
+
     { path: "/immigration/naturalization", element: <CitizenshipPage /> },
     { path: "/immigration/family-based", element: <FamilyBasedImmigrationPetition /> },
     { path: "/immigration/fiance-visa", element: <FianceVisa /> },

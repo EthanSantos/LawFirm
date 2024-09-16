@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ImmigrationImage from "../assets/ImmigrationPicture.png"
+import { Helmet } from 'react-helmet';
 
 const Immigration = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +13,12 @@ const Immigration = () => {
 
     return (
         <section className={`pt-36 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Helmet>
+                <title>Immigration Law - Gwendolyn Santos Law Firm</title>
+                <meta name="description" content="Comprehensive immigration law services to help you navigate complex legal procedures." />
+                <meta property="og:title" content="Immigration Law - Gwendolyn Santos Law Firm" />
+                <meta property="og:description" content="Expert immigration legal services to help you and your family live and work in the USA." />
+            </Helmet>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Title Section */}
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">

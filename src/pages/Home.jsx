@@ -10,6 +10,7 @@ import TestimonialPicture from "../assets/TestimonialPicture.jpg"
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiPhoneCall, FiGlobe, FiDollarSign } from 'react-icons/fi';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     const fadeInUp = {
@@ -72,6 +73,15 @@ const Home = () => {
 
     return (
         <main className="pt-16">
+            <Helmet>
+                <title>Filipino Immigration and Bankruptcy Lawyer in Los Angeles | Gwendolyn Santos Law Firm</title>
+                <meta name="description" content="Led by Gwendolyn Santos, a Filipino lawyer in Los Angeles, our law firm specializes in Immigration and Bankruptcy. We provide expert legal guidance, understanding the unique challenges faced by the Filipino community. Contact us for dedicated support." />
+                <meta name="keywords" content="Filipino lawyer Los Angeles, immigration lawyer, bankruptcy services, Filipino community legal advice, Gwendolyn Santos law firm" />
+                <meta property="og:title" content="Filipino Immigration and Bankruptcy Lawyer in Los Angeles | Gwendolyn Santos Law Firm" />
+                <meta property="og:description" content="Discover compassionate and specialized legal support at Gwendolyn Law Firm, where we understand and address the legal needs of the Filipino community in Los Angeles." />
+                <meta property="og:url" content="https://www.gms-la-legal.com/" />
+            </Helmet>
+
             <header
                 id="home"
                 className="parallax text-white text-center py-12 px-6 bg-cover bg-center relative flex flex-col justify-between items-center"
