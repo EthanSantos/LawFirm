@@ -49,9 +49,8 @@ const BankruptcyFAQ = () => {
                                 </div>
                             </button>
                             <div
-                                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
-                                    openIndex === index ? 'max-h-96' : 'max-h-0'
-                                }`}
+                                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                                    }`}
                             >
                                 <p className="text-gray-700 mt-2 pb-4">{faq.answer}</p>
                             </div>
@@ -65,7 +64,8 @@ const BankruptcyFAQ = () => {
                 </div>
                 <div className="text-gray-500 text-sm mt-6 text-center">
                     <p>
-                        Information contained in this article does not, nor is it intended to, constitute legal advice for any specific situation and does not create a lawyer-client relationship. It likewise does not constitute a guarantee, warranty, or prediction regarding the outcome of your legal matter.
+
+                        Information contained in this article does not, nor is it intended to, constitutes legal advice for any specific situation and does not create a lawyer-client relationship. It likewise does not constitute a guarantee, warranty, or prediction regarding the outcome of your legal matter.
                     </p>
                 </div>
             </div>

@@ -69,7 +69,7 @@ const Testimonials = () => {
             image: TestimonialPicture
         },
         {
-            quote: "I am one of the long-time clients of the Law Office of Gwendolyn Santos. Atty. Santos has assisted me in all of my legal cases - immigration, divorce and even my personal injury case. She is willing to do everything to win and support her clients. For me, she is the beat attorney. Thank you very much!",
+            quote: "I am one of the long-time clients of the Law Office of Gwendolyn Santos. Atty. Santos has assisted me in all of my legal cases - immigration, divorce and even my personal injury case. She is willing to do everything to win and support her clients. For me, she is the best attorney. Thank you very much!",
             name: "Adonis T. Ciokon",
             image: "https://lh3.googleusercontent.com/a-/ALV-UjUoRa2tYtEslbPanx1HKhi6JuUQI-6lKRI2oiTNOONhLMCZk1D8=w120-h120-p-rp-mo-br100"
         },

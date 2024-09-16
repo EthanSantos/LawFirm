@@ -16,7 +16,7 @@ const Footer = () => {
                     © 2024 GMS LA LEGAL LAW OFFICE OF GWENDOLYN M. SANTOS
                 </p>
                 <p className="text-sm mb-2">
-                    3450 Wilshire Blvd Ste 1200, Los Angeles, CA 90010
+                    3450 Wilshire Blvd Ste 1200-105, Los Angeles, CA 90010
                 </p>
                 <p className="text-xs">
                     All rights reserved.

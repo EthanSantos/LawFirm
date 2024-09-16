@@ -31,7 +31,7 @@ const Contact = () => {
                         <div className="border-b pb-4">
                             <h3 className="text-sm font-bold text-gray-600">Address</h3>
                             <p className="text-gray-800 hover:text-primary transition duration-200">
-                                3450 Wilshire Blvd. Ste 1200<br />Los Angeles, CA 90010
+                                3450 Wilshire Blvd. Ste 1200-105<br />Los Angeles, CA 90010
                             </p>
                         </div>
                         <div className="border-b pb-4">
@@ -43,7 +43,7 @@ const Contact = () => {
                         <div className="border-b pb-4">
                             <h3 className="text-sm font-bold text-gray-600">Fax</h3>
                             <p className="text-gray-800 hover:text-primary transition duration-200">
-                                213-377-5243
+                                213- 996-0297
                             </p>
                         </div>
                         <div>

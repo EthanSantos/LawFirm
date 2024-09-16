@@ -64,7 +64,7 @@ const Home = () => {
             image: TestimonialPicture
         },
         {
-            quote: "I am one of the long-time clients of the Law Office of Gwendolyn Santos. Atty. Santos has assisted me in all of my legal cases - immigration, divorce and even my personal injury case. She is willing to do everything to win and support her clients. For me, she is the beat attorney. Thank you very much!",
+            quote: "I am one of the long-time clients of the Law Office of Gwendolyn Santos. Atty. Santos has assisted me in all of my legal cases - immigration, divorce and even my personal injury case. She is willing to do everything to win and support her clients. For me, she is the best attorney. Thank you very much!",
             name: "Adonis T. Ciokon",
             image: "https://lh3.googleusercontent.com/a-/ALV-UjUoRa2tYtEslbPanx1HKhi6JuUQI-6lKRI2oiTNOONhLMCZk1D8=w120-h120-p-rp-mo-br100"
         },
@@ -97,7 +97,7 @@ const Home = () => {
                         animate="visible"
                         variants={{ ...fadeInUp, transition: { duration: 1.2, ease: 'easeOut' } }}
                     >
-                        IMMIGRATION AND BANKRUPTCY LAWYER IN LOS ANGELES
+                        EXPERT IMMIGRATION AND BANKRUPTCY LAWYER IN LOS ANGELES
                     </motion.p>
                 </div>
 
@@ -164,7 +164,7 @@ const Home = () => {
                         <div className="text-left p-4 rounded-lg">
                             <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Our Firm</h3>
                             <p className="text-base sm:text-lg mb-4">
-                                The Law Office of Gwendolyn M. Santos is a law firm located at the Mid-Wilshire District in Los Angeles, CA. Our practice areas are Immigration and Naturalization, Bankruptcy, and Family Law.
+                                The Law Offices of Gwendolyn Malaya-Santos is located at the Mid-Wilshire District in Los Angeles, CA. Our practice areas are Immigration and Naturalization, Bankruptcy, and Family Law.
                             </p>
                             <p className="text-base sm:text-lg mb-4">
                                 Atty. Gwendolyn Malaya-Santos is an active member of the State Bar of California since 2007. She is also licensed as an attorney in the Philippines. She is admitted to practice before the California Court of Appeals and the U.S. Central District Court.
@@ -176,7 +176,7 @@ const Home = () => {
                                 Atty. Malaya-Santos is very familiar with the bankruptcy process, having handled numerous bankruptcy cases before the US Bankruptcy Courts, and Chapter 7 and Chapter 13 Trustees. She is ready to assist consumers through their financial difficulties.
                             </p>
                             <p className="text-base sm:text-lg">
-                                Atty. Malaya-Santos has also joined the American Bar Association, the American Immigration Lawyers Association (AILA), Los Angeles Bar Association, and the Beverly Hills Bar Association.
+                                Atty. Malaya-Santos has also joined the American Bar Association, the American Immigration Lawyers Association (AILA), Los Angeles Bar Association, the Beverly Hills Bar Association, and the Integrated Bar of the Philippines.
                             </p>
                         </div>
                     </motion.div>

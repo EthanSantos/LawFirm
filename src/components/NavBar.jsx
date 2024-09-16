@@ -90,7 +90,7 @@ const NavBar = () => {
                         <Link to="/#home" onClick={handleMenuClose} className="flex items-center">
                             <img src={logo} alt="Logo" className="w-12 h-12 sm:w-16 sm:h-16 mr-4" />
                             <span className="hidden md:flex text-xl sm:text-2xl text-primary font-bold hover:text-secondary">
-                                LAW OFFICES OF GWENDOLYN SANTOS
+                                LAW OFFICE OF GWENDOLYN SANTOS
                             </span>
                         </Link>
 
