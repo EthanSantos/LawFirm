@@ -9,6 +9,26 @@
         "source": "/publications",
         "destination": "/",
         "permanent": true
+      },
+      {
+        "source": "/practice-areas",
+        "destination": "/immigration",
+        "permanent": true
+      },
+      {
+        "source": "/copy-of-immigration",
+        "destination": "/bankruptcy",
+        "permanent": true
+      },
+      {
+        "source": "/contact",
+        "destination": "/#contact",
+        "permanent": true
+      },
+      {
+        "source": "/#home",
+        "destination": "/",
+        "permanent": true
       }
     ]
   }
