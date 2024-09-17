@@ -4,6 +4,11 @@
         "source": "/about-us",
         "destination": "/#about-us",
         "permanent": true
+      },
+      {
+        "source": "/publications",
+        "destination": "/",
+        "permanent": true
       }
     ]
   }
