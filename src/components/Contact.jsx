@@ -22,7 +22,7 @@ const Contact = () => {
                     variants={fadeInUp}
                 >
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-primary uppercase">
-                        Trust Your Law Case to Our Experienced Team.
+                        Trust Your Legal Case to Our Experienced Team.
                     </h2>
                     <p className="text-lg font-semibold text-gray-600 mb-8 uppercase">
                         Contact Us for a Consultation.

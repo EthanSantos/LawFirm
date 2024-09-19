@@ -3,108 +3,80 @@ import ImmigrationImage from "../assets/ImmigrationPicture.png"
 import { Helmet } from 'react-helmet';
 
 const Immigration = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
-            setIsVisible(true);
-        }, 100);
-    }, []);
+            setIsVisible(true)
+        }, 100)
+    }, [])
 
     return (
         <section className={`pt-36 pb-16 bg-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Helmet>
                 <title>Immigration Law - Gwendolyn Santos Law Firm</title>
-                <meta name="description" content="Comprehensive immigration law services to help you navigate complex legal procedures." />
+                <meta name="description" content="Unlock Your American Dream with an Expert Immigration Attorney. Comprehensive immigration law services to help you navigate complex legal procedures." />
                 <meta property="og:title" content="Immigration Law - Gwendolyn Santos Law Firm" />
                 <meta property="og:description" content="Expert immigration legal services to help you and your family live and work in the USA." />
             </Helmet>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Title Section */}
-                <h2 className="text-4xl font-bold text-center text-primary mb-12">
-                    Immigration
-                </h2>
+                <h1 className="text-4xl font-bold text-center text-primary mb-12">
+                    Unlock Your American Dream with an Expert Immigration Attorney!
+                </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {/* Text Section */}
                     <div className="flex flex-col justify-center">
                         <p className="text-xl text-gray-800 mb-6 leading-relaxed">
-                            We handle all aspects of U.S. immigration practice including non-immigrant visa, family-based immigration, business immigration, and naturalization and citizenship, among others.
+                            Are you ready to start a new chapter in the United States, but feeling overwhelmed by the complex immigration process? You don't have to navigate it alone. Our firm is here to guide you every step of the way.
                         </p>
                         <p className="text-xl text-gray-800 mb-8 leading-relaxed">
-                            We have successfully counseled clients on immigration matters before administrative agencies including the US Department of Justice (EOIR), US Board of Immigration Appeals, US Department of Homeland Security, and United States Citizenship and Immigration Services (USCIS).
+                            We handle all aspects of U.S. immigration practice including family-based immigration, business immigration, naturalization and citizenship and non-immigrant visa, among others.
                         </p>
-
-                        <ul className="text-lg text-primary space-y-4">
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Family Immigration
+                        <h2 className="text-3xl font-bold mb-6 text-primary">Why Choose Us?</h2>
+                        <ul className="text-lg text-gray-800 space-y-6">
+                            <li>
+                                <h3 className="text-xl font-bold text-black mb-2">Expertise You Can Trust</h3>
+                                <p>With years of experience and a deep understanding of immigration law, we provide reliable and effective solutions tailored to your unique needs.</p>
                             </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Business Immigration
+                            <li>
+                                <h3 className="text-xl font-bold text-black mb-2">Personalized Service</h3>
+                                <p>We know that every case is different. We take the time to listen and create a strategy that best fits your situation, whether you're applying for a visa, green card, or citizenship.</p>
                             </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                U.S. Citizenship and Naturalization
+                            <li>
+                                <h3 className="text-xl font-bold text-black mb-2">Transparent Communication</h3>
+                                <p>No more confusion or hidden fees. We keep you informed throughout the process, making sure you understand your options and what to expect.</p>
                             </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Visas and Work Permits
+                            <li>
+                                <h3 className="text-xl font-bold text-black mb-2">Proven Track Record</h3>
+                                <p>Our successful track record speaks for itself. We've helped countless individuals and families achieve their American dream.</p>
                             </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Fiance(e) Visa
-                            </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Criminal Immigration
-                            </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Violence Against Women Act (VAWA)
-                            </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Waivers, including:
-                                <ul className="ml-6 mt-2 space-y-2 text-gray-700">
-                                    <li className="flex items-start">
-                                        <span className="mr-2 text-xl">◦</span>
-                                        J-1 Waivers
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="mr-2 text-xl">◦</span>
-                                        Stateside or Provisional Waivers
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="mr-2 text-xl">◦</span>
-                                        Hardship Waivers
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Filipino World War II Veterans Parole Program
-                            </li>
-                            <li className="flex items-start">
-                                <span className="mr-3 text-2xl">•</span>
-                                Deferred Action for Childhood Arrivals (DACA)
+                            <li>
+                                <h3 className="text-xl font-bold text-black mb-2">Compassionate Support</h3>
+                                <p>We understand that immigration matters can be stressful. Our team is here to offer support and answer your questions with empathy and respect.</p>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Image Section */}
                     <div className="flex justify-center items-center">
                         <img src={ImmigrationImage} alt="Immigration" className="rounded-lg shadow-2xl transition-transform transform hover:scale-105 duration-500" />
                     </div>
                 </div>
 
-                <p className="text-lg text-gray-800 mt-12 text-center leading-relaxed">
-                    If you would like more information on Immigration, please contact the Law Offices of Gwendolyn M. Santos. We can answer your questions and ensure you have proper representation on your side. Please call our office at <span className="font-bold">(213) 284-5984</span> or schedule an appointment online.
+                <p className="text-xl text-gray-800 mt-12 text-center leading-relaxed">
+                    Don't let the complexities of immigration hold you back. Contact us today for a consultation and take the first step towards securing your future in the United States!
                 </p>
+
+                <div className="text-center mt-12">
+                    <h2 className="text-3xl font-bold mb-6 text-primary">Your Journey to a Brighter Future Starts Here.</h2>
+                    <a href="tel:+12132845984" className="inline-block">
+                        <button className="bg-primary text-white text-lg font-bold py-3 px-6 rounded-xl hover:bg-secondary transition duration-300">
+                            Contact Us Now
+                        </button>
+                    </a>
+                </div>
             </div>
         </section>
-    );
+    )
 };
 
 export default Immigration;
