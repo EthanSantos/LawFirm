@@ -6,11 +6,11 @@ const ImmigrationFAQ = () => {
     const toggleFAQ = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
-    
+
     const faqs = [
         {
             question: "How do I petition my relative to the US?",
-            answer: `A US citizen or permanent resident, as applicable, can file a petition for an alien relative on behalf of their relative. A U.S. citizen can petition for immediate relatives, such as a spouse or children under 18 years old, for immigration to the US. There are no numerical limitations on these relatives. Some relatives of US citizens - adult children, brothers, and sisters - and those of permanent residents - spouses and children, and unmarried adult children - can qualify for immigrant status to the US. However, there is an annual quota for these visas.`
+            answer: `A US citizen or permanent resident, as applicable, can file a petition for an alien relative on behalf of their relative. A U.S. citizen may petition for immediate relatives, such as a spouse or children under 18 years old, for immigration to the US. There are no numerical limitations on these relatives. Some relatives of US citizens - adult children, brothers, and sisters - and those of permanent residents - spouses and children, and unmarried adult children - can qualify for immigrant status to the US. However, there is an annual quota for these visas.`
         },
         {
             question: "Do I need an attorney to petition my spouse?",
@@ -18,14 +18,13 @@ const ImmigrationFAQ = () => {
         },
         {
             question: "I have a criminal charge or conviction. How would that affect my immigration status?",
-            answer: `An application for an immigrant visa and certain non-immigrant visas may be denied due to specific criminal grounds of inadmissibility. In some cases, the applicant can request a waiver, allowing a visa to be issued despite that ground. Criminal charges or convictions can have serious consequences on your status. It is best to consult with an immigration attorney to discuss your individual case.`
+            answer: `An application for an immigrant visa and certain non-immigrant visas may be denied due to certain criminal grounds of inadmissibility. In some cases, the applicant can request a waiver, allowing a visa to be issued despite that ground. Criminal charges or convictions can have serious consequences on your status. It is best to consult with an immigration attorney to discuss your individual case.`
         },
         {
             question: "How do I bring my fiancé to the US?",
             answer: `A U.S. citizen can bring their fiancé(e) to the United States through a K-1 nonimmigrant visa, commonly referred to as the fiancé(e) visa. The U.S. citizen and their fiancé(e) must have the intention to marry each other within ninety (90) days of the fiancé(e) entering the U.S. They must have met in person within the last two (2) years prior to filing the petition, subject to certain exceptions.`
         }
     ];
-    
 
     return (
         <div className="bg-gray-50 min-h-screen py-16 pt-32">
@@ -46,9 +45,8 @@ const ImmigrationFAQ = () => {
                                 </div>
                             </button>
                             <div
-                                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
-                                    openIndex === index ? 'max-h-96' : 'max-h-0'
-                                }`}
+                                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                                    }`}
                             >
                                 <p className="text-gray-700 mt-2 pb-4">{faq.answer}</p>
                             </div>
