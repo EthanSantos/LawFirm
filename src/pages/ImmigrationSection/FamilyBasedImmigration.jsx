@@ -58,7 +58,7 @@ const FamilyBasedImmigrationPetition = () => {
                 </div>
                 <div className="text-gray-500 text-sm mt-6">
                     <p>
-                        Information contained in this article does not, nor is it intended to, constitute legal advice for any specific situation and does not create a lawyer-client relationship. It likewise does not constitute a guarantee, warranty, or prediction regarding the outcome of your legal matter.
+                        Information contained in this article does not, nor is it intended to, constitutes legal advice for any specific situation and does not create a lawyer-client relationship. It likewise does not constitute a guarantee, warranty, or prediction regarding the outcome of your legal matter.
                     </p>
                 </div>
             </div>
