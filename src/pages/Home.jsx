@@ -80,6 +80,50 @@ const Home = () => {
                 <meta property="og:title" content="Filipino Immigration and Bankruptcy Lawyer in Los Angeles | Gwendolyn Santos Law Firm" />
                 <meta property="og:description" content="Discover compassionate and specialized legal support at Gwendolyn Law Firm, where we understand and address the legal needs of the Filipino community in Los Angeles." />
                 <meta property="og:url" content="https://www.gms-la-legal.com/" />
+
+                <script type="application/ld+json">
+                    {`
+                    {
+                    "@context": "https://schema.org",
+                    "@type": "LegalService",
+                    "name": "Gwendolyn Santos Law Firm",
+                    "image": "https://www.gms-la-legal.com/GMSLogo.png",
+                    "@id": "https://www.gms-la-legal.com",
+                    "url": "https://www.gms-la-legal.com",
+                    "telephone": "+1-213-284-5984",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "3450 Wilshire Blvd Ste 1200-105",
+                        "addressLocality": "Los Angeles",
+                        "addressRegion": "CA",
+                        "postalCode": "90010",
+                        "addressCountry": "US"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "34.0621",  // Estimated coordinates for Wilshire Blvd
+                        "longitude": "-118.3080"  // Estimated coordinates for Wilshire Blvd
+                    },
+                    "openingHoursSpecification": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                        ],
+                        "opens": "09:00",
+                        "closes": "17:00"
+                    },
+                    "priceRange": "$$$",
+                    "sameAs": [
+                        "https://www.facebook.com/GMSLALEGAL",
+                    ]
+                    }
+                `}
+                </script>
+
             </Helmet>
 
             <header
@@ -90,7 +134,7 @@ const Home = () => {
                     height: '650px'
                 }}
             >
-                <div className="flex flex-col items-center justify-start h-full pt-4"> 
+                <div className="flex flex-col items-center justify-start h-full pt-4">
                     <motion.h1
                         className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
                         initial="hidden"
@@ -111,7 +155,7 @@ const Home = () => {
                 </div>
 
                 <motion.div
-                    className="absolute bottom-8 left-0 right-0 px-4" 
+                    className="absolute bottom-8 left-0 right-0 px-4"
                     initial="hidden"
                     animate="visible"
                     variants={{ ...fadeInUp, transition: { duration: 1.4, ease: 'easeOut' } }}
@@ -148,8 +192,8 @@ const Home = () => {
                                 key={index}
                                 area={area.name}
                                 description={area.description}
-                                link={area.link}  
-                                icon={area.icon}  
+                                link={area.link}
+                                icon={area.icon}
                             />
                         ))}
                     </div>
