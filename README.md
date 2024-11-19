@@ -1,8 +1,14 @@
-# React + Vite
+# Law Firm Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive website for a law firm built with a focus on performance and user experience.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: For creating dynamic and interactive user interfaces.
+- **TailwindCSS**: For styling and ensuring a consistent, responsive design.
+- **AWS Lambda**: For handling backend functionality like contact form submissions using serverless architecture.
+- **Vercel**: For fast and reliable deployment.
+
+## Deployment
+
+The website is live at [GMS LA Legal](https://www.gms-la-legal.com).
