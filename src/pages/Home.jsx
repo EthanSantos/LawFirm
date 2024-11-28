@@ -208,7 +208,7 @@ const Home = () => {
                     variants={fadeInUp}
                 >
                     <motion.div
-                        className="md:w-1/2 bg-secondary text-white py-8 px-6 sm:py-12 sm:px-8"
+                        className="md:w-1/2 bg-gradient-to-br from-primary via-primary-focus to-secondary text-white py-8 px-6 sm:py-12 sm:px-8"
                         variants={fadeInUp}
                     >
                         <div className="text-left p-4 rounded-lg">
@@ -232,7 +232,7 @@ const Home = () => {
                     </motion.div>
 
                     <motion.div
-                        className="md:w-1/2 bg-primary text-white py-8 px-6 flex flex-col items-center justify-center"
+                        className="flex-1 bg-gradient-to-br from-primary via-primary-focus to-secondary text-white p-10 flex flex-col justify-center items-center"
                         variants={fadeInUp}
                     >
                         <h3 className="text-2xl sm:text-3xl font-extrabold mb-6">Meet Our Attorney</h3>
