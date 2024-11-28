@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import TestimonialPicture from "../assets/TestimonialPicture.jpg";
 import AvvoIcon from "../assets/AvvoIcon.jsx";
-import TestimonialCard from '../components/TestimonialCard'; 
+import TestimonialCard from '../components/TestimonialCard';
 import { Helmet } from 'react-helmet';
 
 const Testimonials = () => {
@@ -210,27 +210,27 @@ const Testimonials = () => {
                             href="https://www.avvo.com/attorneys/90010-ca-gwendolyn-santos-1218992.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                            className="btn btn-outline btn-primary flex items-center space-x-2 transition duration-200 ease-in-out hover:bg-primary hover:text-white group"
                         >
-                            <AvvoIcon className="w-6 h-6 text-primary" />
+                            <AvvoIcon className="w-6 h-6 text-primary group-hover:text-white" />
                             <span>AVVO</span>
                         </a>
                         <a
                             href="https://www.facebook.com/GMSLALEGAL/reviews"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                            className="btn btn-outline btn-primary flex items-center space-x-2 transition duration-200 ease-in-out hover:bg-primary hover:text-white group"
                         >
-                            <FontAwesomeIcon icon={faFacebook} className="w-6 h-6" />
+                            <FontAwesomeIcon icon={faFacebook} className="w-6 h-6 text-primary group-hover:text-white" />
                             <span>Facebook</span>
                         </a>
                         <a
                             href="https://www.google.com/search?q=%0D%0ALaw+Office+of+Gwendolyn+M+Santos&sca_esv=7ef4f979cad443e4&rlz=1C5CHFA_enUS1114US1114&sxsrf=ADLYWIJh_6Xu2drEHhSLNh8SnI6FeiQzww%3A1726277831810&ei=x-jkZo6VMfjNptQP9Y-fiAs&ved=0ahUKEwjOlMuHpsGIAxX4pokEHfXHB7EQ4dUDCBA&uact=5&oq=%0D%0ALaw+Office+of+Gwendolyn+M+Santos&gs_lp=Egxnd3Mtd2l6LXNlcnAiIQpMYXcgT2ZmaWNlIG9mIEd3ZW5kb2x5biBNIFNhbnRvc0i-A1CtAlitAnABeACQAQCYAQCgAQCqAQC4AQPIAQD4AQL4AQGYAgCgAgCYAwCIBgGSBwCgBwA&sclient=gws-wiz-serp#lrd=0x80c2b8827f3c79a9:0xe8ddfc8f18da46de,1,,,,"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-outline btn-primary flex items-center space-x-2"
+                            className="btn btn-outline btn-primary flex items-center space-x-2 transition duration-200 ease-in-out hover:bg-primary hover:text-white group"
                         >
-                            <FontAwesomeIcon icon={faGoogle} className="w-6 h-6 " />
+                            <FontAwesomeIcon icon={faGoogle} className="w-6 h-6 text-primary group-hover:text-white" />
                             <span>Google</span>
                         </a>
                     </div>

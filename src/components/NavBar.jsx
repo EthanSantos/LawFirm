@@ -83,7 +83,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="bg-white fixed w-full z-50 top-0 border-b border-gray-200" ref={navbarRef}>
+        <div className="bg-white fixed w-full z-50 top-0 border-b border-gray-200 shadow-md" ref={navbarRef}>
             <div className="px-6">
                 <div className="flex justify-between items-center py-4">
                     <div className="flex items-left">
